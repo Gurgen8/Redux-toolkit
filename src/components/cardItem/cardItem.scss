@@ -1,0 +1,51 @@
+@mixin flexible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    flex-direction: column;
+    background: rgb(180, 182, 218);
+    background: radial-gradient(circle, hsla(237, 34%, 78%, 0.9) 0%, hsla(219, 88%, 94%, 0.9) 100%);
+    margin: 0 1rem 1rem 0;
+    height: 8rem;
+    width: 10rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    position: relative;
+    @include flexible();
+    &:hover {
+        background-color: red !important;
+        box-shadow: 5px 10px 10px brown;
+    }
+}
+
+.btn-div {
+    right: 5%;
+    top: 3%;
+    position: absolute;
+}
+.info-span {
+    color: firebrick;
+    b {
+        color: black;
+    }
+}
+
+.remove-btn {
+    color: red;
+    cursor:pointer;
+    transition: all 0.4s;
+    &:hover {
+        transform: scale(1.35);
+    }
+}
+.card-id {
+    cursor: alias;
+    transition: all 0.8s;
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
+

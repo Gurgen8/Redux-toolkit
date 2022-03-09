@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+
+html {
+  line-height: 1.15;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "RocknRoll One", sans-serif;
+}
+
+body {
+  color: #222;
+  overflow: hidden;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  flex: 4;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 20px 0;
+  margin: 0 auto;
+}
+
+.assign {
+  flex: 1;
+}
+
+
+
+//custom scroll
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(30, 30, 87);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(19, 19, 58);
+}
+
+
+//media
+@media Screen and (max-width: 767px) {
+  .wrapper {
+    flex: 1;
+  }
+  .assign {
+    flex: 0;
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+}

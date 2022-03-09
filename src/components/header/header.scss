@@ -1,0 +1,75 @@
+@import "../cardItem/cardItem.scss";
+
+.header {
+    @include flexible();
+    background-color: #222222;
+    justify-content: space-around;
+    .todo-input {
+        width: 100px;
+        max-height: 2.5rem;
+        background-color: #e1ebfd;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        align-self: center;
+        &:focus {
+            outline: none;
+            border: 2px solid rgb(67, 58, 168);
+        }
+    }
+
+    .add-btn {
+        margin-left: 1rem;
+        background-color: #271c6c;
+        color: #e1ebfd;
+        border-radius: 50%;
+        border: 2px solid #e1ebfd;
+        font-size: 1.5rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        cursor: pointer;
+        box-shadow: 2px 4px 10px #271c6c;
+        @include flexible();
+        transition: all 0.3s;
+        &:hover {
+            transform: scale(1.15);
+            background-color: green;
+        }
+
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .header-left,
+    .header-right {
+        display: flex;
+        margin-top: 14px;
+    }
+}
+
+//media
+
+@media Screen and (max-width: 767px) {
+    .header {
+        flex-direction: column;
+    }
+}
+
+@media Screen and (max-width: 364px) {
+    .header-left {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .header-right {
+        flex-direction: row-reverse;
+        .add-btn {
+            margin: 0 10px 0 0;
+        }
+    }
+}
